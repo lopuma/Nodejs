@@ -1,0 +1,309 @@
+/*  Código de nuestro menu */
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  background-color: var(--bgcolor-menu);
+  width: 100%;
+  max-width: var(--maxWidth);
+  height: var(--size-height-navBar);
+  min-height: var(--size-height-navBar);
+  color: var(--blanco);
+  box-shadow: 0 0 10px rgb(0,0,0,0.5);
+}
+
+/* LOGO */
+.Header-logo {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 100%;
+}
+
+/* BOTON PARA EXPANDIR SIDEMENU*/
+.Header-button--sidemenu {
+  color: var(--blanco);
+  height: var(--size-element);
+  width: var(--size-element);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.Header-button--sidemenu i{
+  font-size: 1.5em;
+}
+
+.Header-button--sidemenu:hover{
+  background-color: gray;
+  color: var(--colour-button-success);
+  border-radius: 50%;
+}
+
+.Header-button--sidemenu:focus:not(:focus-visible){
+  outline: none;
+}
+
+/*  LOGO */
+.Header-a--logo {
+  height: 100%;
+  /* margin: 0 10px; */
+}
+
+.Header-a--logo img{
+  width: 220px;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+/* BTN TOGGLE */
+.Header-button--toggle {
+  color: var(--blanco);
+  height: var(--size-element);
+  width: var(--size-element);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 20px;
+  vertical-align: middle;
+  display: none;
+}
+
+.Header-button--toggle i{
+  font-size: 1.5em;
+}
+
+.Header-button--toggle:hover{
+  background-color: gray;
+  color: var(--colour-button-success);
+  border-radius: 50%;
+}
+
+/* NAV */
+.Header-nav {
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.Header-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  height: 100%;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.Header-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+
+}
+
+.Header-a {
+  color: var(--blanco);
+  border-radius: var(--size-border-radius-button);
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.Header-a:hover,
+.Header-a--isActive:hover{
+  background-color: transparent;
+  color: var(--colour-button-success);
+  text-decoration: none;
+}
+
+/* Linea cuando se pasa por el menu */
+.Header-a--toogle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--colour-button-success), var(--colour3-boxShadow), var(--colour-button-success));
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.Header-a--toogle:hover::before {
+  transform: scaleX(1);
+}
+
+/* Linea cuando esta activa la pagina */
+.isFocus::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--colour-lineSelected);
+  opacity: 0;
+  text-decoration: none;
+}
+
+.isSelected::after {
+  opacity: 0.8;
+}
+
+.Header-a--activeLogin{
+  width: 100%;
+  background-color: var(--colour-button-success);
+  height: 100%;
+  border: 1px solid #fff;
+  color: var(--blanco);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 00.5s;
+  transition-timing-function: ease-in-out;
+  color: var(--colour3-boxShadow);
+}
+
+.Header-a--activeLogin:hover{
+  color: var(--blanco);
+  background-color: var(--colour-button-success);
+  box-shadow: 0px 2px 8px var(--colour-button-success), -0px -2px 8px var(--colour3-boxShadow);
+}
+
+.Header-a--activeLogout{
+  width: 100%;
+  background-color: var(--colour-button-unsuccess);
+  color: var(--blanco);
+  height: 100%;
+  border: 1px solid #fff;
+  transition-property: background-color, box-shadow;
+  transition-duration: 00.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.Header-a--activeLogout:hover{
+  background-color: var(--colour-button-unsuccess);
+  box-shadow: 0px 2px 8px var(--colour-button-unsuccess), -0px -2px 8px var(--colour3-boxShadow);
+}
+
+/*  TRIBUTO PARA DESACTIVAR BOTONES */
+.is-disabled{
+  display: none;
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media all and (max-width: 450px) {
+  .is-disabled{
+    display: block;
+  }
+
+  .Header-button--sidemenu {
+    display: none;
+  }
+
+  .Header-button--toggle {
+    display: block;
+  }
+  
+  .Header-button--toggle:focus:not(:focus-visible){
+    outline: none;
+  }
+
+  .Header-nav {
+    border-top: solid 3px var(--colour-button-success);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: var(--size-height-navBar);
+    width: 100%;
+    align-items: center;
+    background-color: var(--bgcolor-menu);
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .Header-ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .Header-li {
+    /* padding: 20px 0; */
+    height: var(--size-element);
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .Header-nav__isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .Header-a--logo{
+    margin: 0;
+  }
+  
+}
+

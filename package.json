@@ -1,0 +1,27 @@
+{
+  "name": "cursonodejs",
+  "version": "1.0.0",
+  "description": "Curso de NODE JS",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lopuma/Nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lopuma/Nodejs/issues"
+  },
+  "homepage": "https://github.com/lopuma/Nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
