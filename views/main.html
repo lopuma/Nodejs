@@ -8,43 +8,106 @@
     <link rel="stylesheet" href="../resources/css/_reset.css" type="text/css">
     <link rel="stylesheet" href="../resources/css/navbar.css" type="text/css">
     <link rel="stylesheet" href="../resources/css/variables.css" type="text/css">
+    <style>
+      .main{
+        margin: 120px auto;
+        background: gray;
+      }
+    </style>
 </head>
 <body>
     <div class="Header">
 
-        <div class="Header-logo">
-            <button class="Header-button--sidemenu" id="btnSidemenu">
-              <i id="fa-bars" data-original="fa-solid fa-bars" class="fa-solid fa-bars"></i>
-            </button>
-            <!-- <a href="/" class="Header-a--logo"><img src=".../../../../resources/img/SANMIGUEL.png" alt=""></a> -->
-          </div>
-          
-          <button class="Header-button--toggle" id="btnToggle">
-            <i id="fa-bars--toggle" data-original="Header-i--toggle fa-solid fa-bars" class="Header-i--toggle fa-solid fa-bars"></i>
-          </button>
-          
-          <nav class="Header-nav" id="navBar">
-            <ul class="Header-ul">
-            
-              <li class="Header-li"><a class="Header-a Header-a--select Header-a--toogle is-disabled isFocus "
-                  href="../workspace/admin" id="btnAdmin">
-                  User Manager
-                </a></li>
-              <li class="Header-li"><a class="Header-a Header-a--isActive Header-a--toogle is-disabled isFocus "
-                  href="../workspace/books" id="btnBook">Books</a></li>
-              <li class="Header-li"><a class="Header-a Header-a--select Header-a--toogle is-disabled isFocus "
-                  href="../workspace/partners" id="btnPartner">Partners</a></li>
-              <li class="Header-li"><a class="Header-a Header-a--select Header-a--toogle is-disabled isFocus "
-                  href="../workspace/bookings" id="btnBooking">Bookings</a></li>
-          
-          
-    
-              <li class="Header-li"><a class="Header-a Header-a--toogle Header-a--isSelect isFocus " href="/register"
-                  id="btnRecord">Record</a></li>
-              <li class="Header-li"><a class="Header-a Header-a--activeLogout" href="/logout">Logout</a></li>
-              <li class="Header-li"><a href="/login" class="Header-a Header-a--activeLogin">Login</a></li>
-            </ul>
-          </nav>
+      <div class="Header-logo">
+        <button class="Header-button--sidemenu" id="btnSidemenu">
+          <i id="fa-bars" data-original="fa-solid fa-bars" class="fa-solid fa-bars"></i>
+        </button>
+        <a href="/" class="Header-a--logo"><img loading="lazy" src="resources/img/logo.svg" alt="SanMiguel Logo" width="100%" height="100%"></img></a>
+      </div>
+      
+      <button class="Header-button--toggle" id="btnToggle">
+        <i id="fa-bars--toggle" data-original="Header-i--toggle fa-solid fa-bars" class="Header-i--toggle fa-solid fa-bars"></i>
+      </button>
+      
+      <nav class="Header-nav" id="navBar">
+        <ul class="Header-ul">
+          {{#if login}}
+          {{#if userRol}}
+          <li class="Header-li"><a class="Header-a  Header-a--toogle isDisabled isFocus"
+              href="../workspace/admin" id="btnAdmin">
+              User Manager
+            </a></li>
+          {{/if}}
+          <li class="Header-li"><a class="Header-a Header-a--toogle isDisabled isFocus"
+              href="../workspace/books" id="btnBook">Books</a></li>
+          <li class="Header-li"><a class="Header-a  Header-a--toogle isDisabled isFocus"
+              href="../workspace/partners" id="btnPartner">Partners</a></li>
+          <li class="Header-li"><a class="Header-a  Header-a--toogle isDisabled isFocus"
+              href="../workspace/bookings" id="btnBooking">Bookings</a></li>
+      
+      
+          {{#if userRol}}
+          <li class="Header-li"><a class="Header-a Header-a--toogle isFocus" href="/register"
+              id="btnRecord">Record</a></li>
+          {{/if}}
+          <li class="Header-li"><a class="Header-a Header-a--activeLogout" href="/logout">Logout</a></li>
+          {{else}}
+          <li class="Header-li"><a href="/login" class="Header-a Header-a--activeLogin">Login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+
+    </div>
+    <div class="main">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum quo necessitatibus delectus maxime ullam ea ipsa non quaerat. Placeat, facilis? Debitis natus tempore doloribus. Odit dolorem dolore magni magnam.</p>
     </div>
 </body>
 </html>

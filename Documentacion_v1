@@ -1,5 +1,13 @@
 **** BD_mysql
 
+root > mysql
+
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'nombre_usuario'@'localhost';
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
+port 3306
+
 --- Data base >> 
         CREATE DATABASE liburutegiasanmiguel;
 
@@ -21,15 +29,15 @@
         create table books(
           -- EJEMPLO DE ID LIBRO : 100001, 100002
           id_book BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-          titulo VARCHAR(50) COLLATE utf8_spanish_ci NOT NULL,
-          autor VARCHAR(50) COLLATE utf8_spanish_ci  NOT NULL DEFAULT 'Desconocido',
+          title VARCHAR(50) COLLATE utf8_spanish_ci NOT NULL,
+          author VARCHAR(50) COLLATE utf8_spanish_ci  NOT NULL DEFAULT 'Desconocido',
           isbn  VARCHAR(45) COLLATE utf8_spanish_ci,
-          tipo VARCHAR(45) COLLATE utf8_spanish_ci, 
-          idioma VARCHAR(25) COLLATE utf8_spanish_ci,           
-          coleccion VARCHAR(50) COLLATE utf8_spanish_ci, 
-          fecha_compra DATE,
+          type VARCHAR(45) COLLATE utf8_spanish_ci, 
+          language VARCHAR(25) COLLATE utf8_spanish_ci,           
+          collection VARCHAR(50) COLLATE utf8_spanish_ci, 
+          purchase_date DATE,
           --  formato: YYYY-MM-DD, por ejemplo 2022-07-07
-          reservado BOOLEAN DEFAULT 0
+          reserved BOOLEAN DEFAULT 0
          )AUTO_INCREMENT=100000 ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 +--------------+-----------------+------+-----+-------------+----------------+
